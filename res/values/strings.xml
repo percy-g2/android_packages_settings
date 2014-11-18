@@ -2083,11 +2083,6 @@ alog [CHAR LIMIT=none] -->
     <!-- Storage setting.  Label for installer CD [CHAR LIMIT=30]-->
     <string name="usb_label_installer_cd">"Install file-transfer tools"</string>
 
-    <!-- Phone info screen, section titles: -->
-    <string name="battery_status_title">Battery status</string>
-    <!-- Phone info screen, section titles: -->
-    <string name="battery_level_title">Battery level</string>
-
     <!-- APN Settings -->
     <!-- APN settings screen title -->
     <string name="apn_settings">APNs</string>
