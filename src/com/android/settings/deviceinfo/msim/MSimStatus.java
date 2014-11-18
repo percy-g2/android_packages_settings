@@ -230,18 +230,6 @@ public class MSimStatus extends PreferenceActivity {
         }
     }
 
-    private BroadcastReceiver mBatteryInfoReceiver = new BroadcastReceiver() {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            if (Intent.ACTION_BATTERY_CHANGED.equals(action)) {
-                mBatteryLevel.setSummary(Utils.getBatteryPercentage(intent));
-                mBatteryStatus.setSummary(Utils.getBatteryStatus(getResources(), intent));
-            }
-        }
-    };
-
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
