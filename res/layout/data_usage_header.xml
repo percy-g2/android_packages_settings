@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2011 The Android Open Source Project
+     Copyright (c) 2012, The Linux Foundation. All rights reserved.
+
+     Not a Contribution, Apache license notifications and license are retained
+     for attribution purposes only.
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <FrameLayout
+        android:id="@+id/network_switches_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/network_switches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:showDividers="middle|end"
+            android:divider="?android:attr/listDivider" />
+    </FrameLayout>
+
+    <Switch android:id="@+id/data_usage_data_statistics_switch"
+            android:text="@string/data_usage_enable_mobile_statistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@*android:dimen/preference_item_padding_side"
+            android:paddingRight="@*android:dimen/preference_item_padding_side"
+            android:checked="false"
+            android:orientation="vertical"
+            android:showDividers="middle|end"
+            android:divider="?android:attr/listDivider" />
+
+    <include layout="@layout/data_usage_cycles" />
+    <include layout="@layout/data_usage_chart" />
+
+    <!--
+        This TextView will draw itself every time
+        it re-measured itself.
+    -->
+    <com.android.settings.widget.DataUsageTextView
+        android:id="@+id/usage_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+        android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+        android:paddingTop="8dip"
+        android:paddingBottom="8dip"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+        android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+        android:paddingBottom="8dip"
+        android:text="@string/data_usage_empty"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <include layout="@layout/data_usage_detail" />
+
+</LinearLayout>
