@@ -3200,8 +3200,6 @@ alog [CHAR LIMIT=none] -->
     <!-- App Fuel Gauge strings -->
     <skip />
 
-    <!-- Activity title for App Fuel Gauge summary -->
-    <string name="power_usage_summary_title">Battery</string>
     <!-- Activity title summary for App Fuel Gauge summary -->
     <string name="power_usage_summary">What has been using the battery</string>
     <!-- Message to show when battery usage data is not available [CHAR LIMIT=30] -->
