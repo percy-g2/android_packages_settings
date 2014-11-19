@@ -406,7 +406,6 @@ public class MSimStatus extends PreferenceActivity {
                 mTelephonyManager.listen(mPhoneStateListener[i], PhoneStateListener.LISTEN_NONE);
             }
         }
-        unregisterReceiver(mBatteryInfoReceiver);
         mHandler.removeMessages(EVENT_UPDATE_STATS);
     }
 
