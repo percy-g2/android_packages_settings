@@ -393,7 +393,6 @@ public class MSimStatus extends PreferenceActivity {
                 updateNetworkType(i);
             }
         }
-        registerReceiver(mBatteryInfoReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
         mHandler.sendEmptyMessage(EVENT_UPDATE_STATS);
     }
 
