@@ -335,10 +335,10 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
                         + " groups");
                 return "Unavailable";
             } else {
-//                return (new StringBuilder(m.group(1)).append("\n").append(
-//                        m.group(2)).append(" ").append(m.group(3)).append("\n")
-//                        .append(m.group(4))).toString();
-                return (new StringBuilder("3.4.0-perf")).toString();
+                return (new StringBuilder(m.group(1)).append("\n").append(
+                        m.group(2)).append(" ").append(m.group(3)).append("\n")
+                        .append(m.group(4))).toString();
+//                return (new StringBuilder("3.4.0-perf")).toString();
             }
         } catch (IOException e) {
             Log.e(LOG_TAG,
